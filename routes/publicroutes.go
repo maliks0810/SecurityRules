@@ -14,5 +14,5 @@ func PublicRoutes(app *fiber.App) {
 	rules := api.Group("/rules")
 	rules.Get("/getSecurityExceptions", handler.GetSecurityException)
 	rules.Post("/insertSecurityException", handler.InsertSecurityException)
-	rules.Delete("/:id", handler.Delete)
+
 }
