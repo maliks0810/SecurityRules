@@ -2,7 +2,7 @@ package handlers
 
 import (
 	"SecurityRules/database"
-	"SecurityRules/models"
+	"SecurityRules/internal/app/models"
 	"context"
 	"strconv"
 	"time"
