@@ -26,8 +26,8 @@ func connectSnowflake() {
 func main() {
 	cfg := config.Load()
 
-	connectPostgres()
-	defer database.Close()
+	//connectPostgres()
+	//defer database.Close()
 
 	connectSnowflake()
 	defer database.CloseSnowflake()

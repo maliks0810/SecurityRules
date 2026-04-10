@@ -34,12 +34,12 @@ func Load() *Config {
 
 func LoadSnowflake() *SnowflakeConfig {
 	return &SnowflakeConfig{
-		Account:       getEnv("SNOWFLAKE_ACCOUNT", ""),
-		User:          getEnv("SNOWFLAKE_USER", ""),
-		Role:          getEnv("SNOWFLAKE_ROLE", ""),
-		Database:      getEnv("SNOWFLAKE_DATABASE", ""),
-		Warehouse:     getEnv("SNOWFLAKE_WAREHOUSE", ""),
-		Schema:        getEnv("SNOWFLAKE_SCHEMA", "PUBLIC"),
+		Account:       getEnv("SNOWFLAKE_ACCOUNT", "tcw.west-us-2.privatelink"),
+		User:          getEnv("SNOWFLAKE_USER", "sumit.malik@tcw.com"),
+		Role:          getEnv("SNOWFLAKE_ROLE", "APP-SNOWF-DE_DEVELOPER_ADV"),
+		Database:      getEnv("SNOWFLAKE_DATABASE", "TCW_CORE_DEV"),
+		Warehouse:     getEnv("SNOWFLAKE_WAREHOUSE", "COMPUTE_WH"),
+		Schema:        getEnv("SNOWFLAKE_SCHEMA", "DATA_QUALITY"),
 		Authenticator: getEnv("SNOWFLAKE_AUTHENTICATOR", "externalbrowser"),
 	}
 }

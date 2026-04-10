@@ -24,7 +24,7 @@
             "mode": "debug",
             "program": "${workspaceFolder}",
             "env": {
-                "SNOWFLAKE_ACCOUNT": "tcw.west-us-2.privatelink ",
+                "SNOWFLAKE_ACCOUNT": "tcw.west-us-2.privatelink",
                 "SNOWFLAKE_USER": "sumit.malik@tcw.com",
                 "SNOWFLAKE_ROLE": "APP-SNOWF-DE_DEVELOPER_ADV",
                 "SNOWFLAKE_DATABASE": "TCW_CORE_DEV",
