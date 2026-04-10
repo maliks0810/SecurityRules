@@ -1,0 +1,34 @@
+{
+    "snowflake.connections": [
+        {
+            "name": "Snowflake - DATA_QUALITY",
+            "accountName": "<your_account>.snowflakecomputing.com",
+            "username": "<your_username>",
+            "database": "DATA_QUALITY",
+            "warehouse": "<your_warehouse>",
+            "role": "<your_role>",
+            "schema": "PUBLIC"
+        }
+    ],
+    "sqltools.connections": [
+        {
+            "name": "PostgreSQL - DATA_QUALITY",
+            "driver": "PostgreSQL",
+            "server": "localhost",
+            "port": 5432,
+            "database": "DATA_QUALITY",
+            "username": "postgres",
+            "password": "1010data"
+        },
+        {
+            "name": "Snowflake - DATA_QUALITY",
+            "driver": "Snowflake",
+            "accountName": "<your_account>.snowflakecomputing.com",
+            "username": "<your_username>",
+            "database": "DATA_QUALITY",
+            "warehouse": "<your_warehouse>",
+            "role": "<your_role>",
+            "schema": "PUBLIC"
+        }
+    ]
+}
