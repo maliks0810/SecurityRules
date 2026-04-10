@@ -36,6 +36,22 @@
             "args": []
         },
         {
+            "name": "Launch SecurityRules API (SQL Server)",
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "program": "${workspaceFolder}",
+            "env": {
+                "SQLSERVER_HOST": "<your_server>",
+                "SQLSERVER_PORT": "1433",
+                "SQLSERVER_USER": "<your_username>",
+                "SQLSERVER_PASSWORD": "<your_password>",
+                "SQLSERVER_DATABASE": "DATA_QUALITY",
+                "PORT": "3000"
+            },
+            "args": []
+        },
+        {
             "name": "Attach to Process",
             "type": "go",
             "request": "attach",
