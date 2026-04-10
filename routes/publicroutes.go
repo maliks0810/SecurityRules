@@ -1,7 +1,7 @@
 package routes
 
 import (
-	"SecurityRules/handlers"
+	"SecurityRules/internal/app/handlers"
 
 	"github.com/gofiber/fiber/v2"
 )
