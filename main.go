@@ -10,12 +10,27 @@ import (
 	"github.com/gofiber/fiber/v2"
 )
 
+func connectPostgres() {
+	cfg := config.Load()
+	database.Connect(cfg)
+	database.Migrate()
+	log.Println("PostgreSQL connection established")
+}
+
+func connectSnowflake() {
+	sfCfg := config.LoadSnowflake()
+	database.ConnectSnowflake(sfCfg)
+	log.Println("Snowflake connection established")
+}
+
 func main() {
 	cfg := config.Load()
 
-	database.Connect(cfg)
+	connectPostgres()
 	defer database.Close()
-	database.Migrate()
+
+	connectSnowflake()
+	defer database.CloseSnowflake()
 
 	app := fiber.New(fiber.Config{
 		AppName: "SecurityRules API",
