@@ -13,10 +13,10 @@ func Setup(app *fiber.App) {
 
 	rules := api.Group("/rules")
 	rules.Get("/", handler.GetAll)
-	rules.Get("/getsecurityexception", handler.GetSecurityException)
+	rules.Get("/getSecurityExceptions", handler.GetSecurityException)
 	rules.Get("/:id", handler.GetByID)
 	rules.Post("/", handler.Create)
-	rules.Post("/insertsecurityexception", handler.InsertSecurityException)
+	rules.Post("/insertSecurityException", handler.InsertSecurityException)
 	rules.Put("/:id", handler.Update)
 	rules.Delete("/:id", handler.Delete)
 }
