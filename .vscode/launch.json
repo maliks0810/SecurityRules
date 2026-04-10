@@ -26,7 +26,7 @@
             "env": {
                 "SNOWFLAKE_ACCOUNT": "<your_account>",
                 "SNOWFLAKE_USER": "<your_username>",
-                "SNOWFLAKE_PASSWORD": "<your_password>",
+                "SNOWFLAKE_AUTHENTICATOR": "externalbrowser",
                 "SNOWFLAKE_DATABASE": "DATA_QUALITY",
                 "SNOWFLAKE_WAREHOUSE": "<your_warehouse>",
                 "SNOWFLAKE_ROLE": "<your_role>",
