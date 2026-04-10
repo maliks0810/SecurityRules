@@ -4,7 +4,7 @@ import (
 	"SecurityRules/config"
 	"SecurityRules/database"
 	"SecurityRules/internal/middleware"
-	"SecurityRules/routes"
+	"SecurityRules/internal/routes"
 	"log"
 
 	"github.com/gofiber/fiber/v2"
