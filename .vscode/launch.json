@@ -52,6 +52,23 @@
             "args": []
         },
         {
+            "name": "Launch SecurityRules API (Oracle)",
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "program": "${workspaceFolder}",
+            "env": {
+                "ORACLE_HOST": "<your_host>",
+                "ORACLE_PORT": "1521",
+                "ORACLE_USER": "<your_username>",
+                "ORACLE_PASSWORD": "<your_password>",
+                "ORACLE_SERVICE_NAME": "<your_service_name>",
+                "ORACLE_DATABASE": "DATA_QUALITY",
+                "PORT": "3000"
+            },
+            "args": []
+        },
+        {
             "name": "Attach to Process",
             "type": "go",
             "request": "attach",
