@@ -37,7 +37,7 @@ func main() {
 	})
 
 	middleware.Setup(app)
-	routes.Setup(app)
+	routes.PublicRoutes(app)
 
 	app.Get("/health", func(c *fiber.Ctx) error {
 		return c.JSON(fiber.Map{"status": "ok"})
