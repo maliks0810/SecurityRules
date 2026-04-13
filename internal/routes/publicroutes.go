@@ -11,4 +11,5 @@ func PublicRoutes(app *fiber.App) {
 
 	route.Get("/info", handlers.GetInformation)
 	route.Get("/mukesh", handlers.GetMukesh)
+	route.Get("/getSecurityExceptions", handlers.GetSecurityExceptions)
 }
