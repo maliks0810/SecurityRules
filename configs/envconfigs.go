@@ -15,6 +15,13 @@ type envConfigs struct {
 	AuthorizationUrl			string 		`mapstructure:"PERMITIO_AUTH_URL"`
 	AuthorizationKey			string 		`mapstructure:"PERMITIO_AUTH_KEY"`
 	AmqpConnection	 			string 		`mapstructure:"AMQP_CONNECTION_STRING"`
+	SnowflakeAccount			string 		`mapstructure:"SNOWFLAKE_ACCOUNT"`
+	SnowflakeUser				string 		`mapstructure:"SNOWFLAKE_USER"`
+	SnowflakeRole				string 		`mapstructure:"SNOWFLAKE_ROLE"`
+	SnowflakeWarehouse			string 		`mapstructure:"SNOWFLAKE_WAREHOUSE"`
+	SnowflakeDatabase			string 		`mapstructure:"SNOWFLAKE_DATABASE"`
+	SnowflakeSchema				string 		`mapstructure:"SNOWFLAKE_SCHEMA"`
+	SnowflakeAuthenticator		string 		`mapstructure:"SNOWFLAKE_AUTHENTICATOR"`
 }
 
 var EnvConfigs *envConfigs
@@ -47,6 +54,15 @@ func loadEnvironmentVariables() (configs *envConfigs) {
 
 	// AMQP Configurations (Injected by ES-PlatformEngineering)
 	viper.BindEnv("AMQP_CONNECTION_STRING")
+
+	// Snowflake Configurations
+	viper.BindEnv("SNOWFLAKE_ACCOUNT")
+	viper.BindEnv("SNOWFLAKE_USER")
+	viper.BindEnv("SNOWFLAKE_ROLE")
+	viper.BindEnv("SNOWFLAKE_WAREHOUSE")
+	viper.BindEnv("SNOWFLAKE_DATABASE")
+	viper.BindEnv("SNOWFLAKE_SCHEMA")
+	viper.BindEnv("SNOWFLAKE_AUTHENTICATOR")
 
 	golangEnv := viper.GetString("GOLANG_ENVIRONMENT")
 
