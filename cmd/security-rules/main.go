@@ -33,6 +33,7 @@ func main() {
 	prepare()
 
 	app := fiber.New()
+
 	middleware.FiberMiddleware(app)
 
 	routes.PublicRoutes(app)
