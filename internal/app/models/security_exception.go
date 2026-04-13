@@ -7,7 +7,7 @@ type SecurityException struct {
 	RuleID              *int       `json:"rule_id"`
 	AladdinID           *string    `json:"aladdin_id"`
 	RunDate             *time.Time `json:"run_date"`
-	RunStartTime        *time.Time `json:"run_start_time"`
+	RunStart            *time.Time `json:"run_start"`
 	ResultTypeID        *int       `json:"result_type_id"`
 	ExceptionSourceID   *int       `json:"exception_source_id"`
 	ExceptionStatusID   *int       `json:"exception_status_id"`
@@ -19,7 +19,6 @@ type SecurityException struct {
 	AssignedBy          *string    `json:"assigned_by"`
 	ResolveDate         *time.Time `json:"resolve_date"`
 	IssueDescription    *string    `json:"issue_description"`
-	SourceSystem        *string    `json:"source_system"`
 	CreatedDate         *time.Time `json:"created_date"`
 	CreatedBy           *string    `json:"created_by"`
 	ModifiedDate        *time.Time `json:"modified_date"`
