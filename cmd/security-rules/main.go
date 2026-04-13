@@ -18,6 +18,7 @@ import (
 	"securityrules/security-rules/internal/routes"
 	"securityrules/security-rules/internal/utils/log"
 	"securityrules/security-rules/internal/utils/net"
+	db "securityrules/security-rules/internal/utils/snowflake"
 )
 
 func main() {
@@ -64,7 +65,7 @@ func newTracerProvider() *sdktrace.TracerProvider {
 }
 
 func prepare() {
-
+	db.Connect()
 }
 
 // privateRouteHandlers configures specific handlers for the non-prod/prod environments.  For some external API calls, there is only a single environment.  For non-production
