@@ -13,6 +13,10 @@ import (
 
 )
 
+// DB is the package-level Snowflake database connection, initialized by main.go
+// at startup and consumed by handlers.
+var DB *sql.DB
+
 /*
 Representation of properties required to connect/communicate with TCW Data Cloud
 via the Snowflake driver (https://github.com/snowflakedb/gosnowflake)
