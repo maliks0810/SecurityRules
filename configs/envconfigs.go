@@ -22,6 +22,9 @@ type envConfigs struct {
 	SnowflakeDatabase			string 		`mapstructure:"SNOWFLAKE_DATABASE"`
 	SnowflakeSchema				string 		`mapstructure:"SNOWFLAKE_SCHEMA"`
 	SnowflakeAuthenticator		string 		`mapstructure:"SNOWFLAKE_AUTHENTICATOR"`
+	KeyVaultUrl                             string `mapstructure:"AZ_KEY_VAULT_VELOCITY_URL"`
+	KeyVaultDerKey                          string `mapstructure:"AZ_SF_DEF_KEY"`
+	KeyVaultPwdKey                          string `mapstructure:"AZ_SF_PWD_KEY"`
 }
 
 var EnvConfigs *envConfigs
