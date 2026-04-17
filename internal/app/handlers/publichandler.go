@@ -21,7 +21,7 @@ func GetSecurityExceptions(ctx *fiber.Ctx) error {
 		return ctx.Status(fiber.StatusBadRequest).JSON(fiber.Map{"error": "aladdin_id query parameter is required"})
 	}
 
-	var SQL string = "SELECT TOP 1 SECURITY_EXCEPTION_ID, RULE_ID, ALADDIN_ID, RUN_DATE, RUN_START, " +
+	var SQL string = "SELECT  SECURITY_EXCEPTION_ID, RULE_ID, ALADDIN_ID, RUN_DATE, RUN_START, " +
 		"RESULT_TYPE_ID, EXCEPTION_SOURCE_ID, EXCEPTION_STATUS_ID, SEVERITY_TYPE_ID, " +
 		"PROCESS_TYPE_ID, CATEGORY_TYPE_ID, ASSIGN_TO, ASSIGNED_BY, " +
 		" ISSUE_DESCRIPTION, CREATED_DATE, CREATED_BY, " +
